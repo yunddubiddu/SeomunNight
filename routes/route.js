@@ -1,4 +1,27 @@
-
+router.use(expressLayouts);
+//route, routing
+router.get('/', (req, res) => {
+    res.render("main");
+    //서문시장야시장의 메인페이지를 연결
+});
+router.get('/choice', (req, res) => {
+    res.render("choice");
+});
+router.get('/index', (req, res) => {
+    res.render("index");
+});
+router.get('/intro', (req, res) => {
+    res.render("intro");
+});
+router.get('/join1', (req, res) => {
+    res.render("join1");
+});
+router.get('/join2', (req, res) => {
+    res.render("join2");
+});
+router.get('/login', (req, res) => {
+    res.render("login");
+}); 
 
 /////////////~~~공지사항 SQL 연결~~~/////////////
 var express = require('express');
@@ -8,7 +31,7 @@ const { check , validationResult } = require('express-validator');
 const db = require('./../db.js');
 
 /////////////공지사항 페이지/////////////
-router.get('/' , function(req , res, next) {
+router.get('/noti' , function(req , res, next) {
 
     db.getAllList((rows) => {
         res.render('noti' , {rows : rows})

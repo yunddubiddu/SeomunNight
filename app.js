@@ -3,11 +3,6 @@ var session = require("express-session");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var path = require('path');
-// const http = this.use.require('http');
-
-// setInterval(function(){
-//     http.get("http://")
-// }, 600000)
 
 var routers = require('./routes/route')
 
