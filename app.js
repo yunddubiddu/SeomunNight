@@ -3,6 +3,7 @@ var session = require("express-session");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var path = require('path');
+var expressLayouts = require('express-ejs-layouts');
 
 var routers = require('./routes/route')
 
@@ -20,7 +21,8 @@ app.use(session({
     secret :"node-session",
     resave:false,
     saveUninitialized:true
-}))
+}));
+app.use(expressLayouts);
 
 app.use('/' , routers);
 

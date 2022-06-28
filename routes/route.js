@@ -1,3 +1,12 @@
+/////////////~~~공지사항 SQL 연결~~~/////////////
+var express = require('express');
+var router = express.Router();
+var expressLayouts = require('express-ejs-layouts');
+const { check , validationResult } = require('express-validator');
+
+const db = require('./../db.js');
+
+
 router.use(expressLayouts);
 //route, routing
 router.get('/', (req, res) => {
@@ -22,14 +31,6 @@ router.get('/join2', (req, res) => {
 router.get('/login', (req, res) => {
     res.render("login");
 }); 
-
-/////////////~~~공지사항 SQL 연결~~~/////////////
-var express = require('express');
-var router = express.Router();
-const { check , validationResult } = require('express-validator');
-
-const db = require('./../db.js');
-
 /////////////공지사항 페이지/////////////
 router.get('/noti' , function(req , res, next) {
 
@@ -65,7 +66,7 @@ router.post('/store',
             let tittle = param['tittle'];
             let content = param['content'];
             db.insertList(tittle, content, () =>{
-            res.redirect('/');
+            res.redirect('/noti');
             });
         }
     }
@@ -97,7 +98,7 @@ router.post('/managere', [check('content').isLength({ min: 1 , max: 3000})],
         });
         }else{
             db.updateListById(id,tittle, content, () =>{
-            res.redirect('/');
+            res.redirect('/noti');
             });
         }
     });
@@ -105,57 +106,9 @@ router.post('/managere', [check('content').isLength({ min: 1 , max: 3000})],
 router.get('/deletelist', (req, res) =>{
     let id = req.query.id;
     db.deleteListById(id, () =>{
-      res.redirect('/');
+      res.redirect('/noti');
     });
   });
-
-
-
-////////////////////////////////////////////////////////////////
-/////////////~~~로그인 세션 연결~~~/////////////
-
-// const path = require("path");
-// var  express = require("express");
-// var router = express.Router();
-
-// var  controller_main = require("../controllers/login-controller");
-
-// /////////////로그인 페이지/////////////
-//   router.get("/login", function(req,res){
-//        res.sendFile(path.join(__dirname , "../public/login.html"));
-//   });
-  
-//   router.post("/login", async function(req,res){
-//       // 로그인 확인을 위해 컨트롤러 호출
-//        var result = await controller_main.SignIn(req,res);   
-//        res.send(result);
-//   });
-  
-// /////////////로그아웃 페이지/////////////
-//   router.get("/logout", function(req,res){
-//        console.log("clear cookie");
-//        // 로그아웃 쿠키 삭제
-//        res.clearCookie('userid');
-//        res.clearCookie('username');
-  
-//        // 세션정보 삭제
-//        console.log("destroy session");
-//        req.session.destroy();
-       
-//        res.sendFile(path.join(__dirname , "../public/login.html"));
-//   });
-  
-// /////////////회원가입 페이지/////////////
-//   router.get("/signup", function(req,res){
-//        res.sendFile(path.join(__dirname , "../public/signup.html"));
-//   });
-  
-//   router.post("/signup", async function(req,res){
-//       // 회원가입 컨트롤러 호출
-//        var result = await controller_main.SignUp(req,res);
-//        res.send(result);
-//   });
-
 
 module.exports = router;
 
