@@ -1,12 +1,12 @@
 var mysql = require('mysql');
 
-var connection = mysql.createConnection({
-  host : 'localhost',
-  user : 'root',
-  password : '1234',
-  port: '3306',
-  database : 'seomunlist',
-  dateStrings: "date" //날짜 시간 출력
+const connection = mysql.createConnection({
+    host : 'us-cdbr-east-05.cleardb.net',
+    user : 'b58476bab4d036', //ID
+    password : '6500331a', //비밀번호
+    port : '3306',
+    database : 'heroku_b7ac236f22ffd05',
+    dateStrings: "date" //날짜 시간 출력
 });
 
 //리스트 전체를 불러오는 함수
