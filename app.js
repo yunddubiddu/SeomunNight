@@ -3,9 +3,10 @@ var session = require("express-session");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var path = require('path');
+
 var expressLayouts = require('express-ejs-layouts');
 
-var routers = require('./routes/route')
+var routers = require('./routes/route.js')
 
 var app = express();
 
