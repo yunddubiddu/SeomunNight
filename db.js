@@ -2,10 +2,10 @@ var mysql = require('mysql');
 
 const connection = mysql.createConnection({
     host : 'us-cdbr-east-05.cleardb.net',
-    user : 'b033053593ac49', //ID
-    password : '089a8430', //비밀번호
+    user : 'b3a897121f50bf', //ID
+    password : 'a28697b7', //비밀번호
     port : '3306',
-    database : 'heroku_ee9f78f10b9d17a',
+    database : 'heroku_ade8dd88f0106d9',
     dateStrings: "date" //날짜 시간 출력
 });
 
