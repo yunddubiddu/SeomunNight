@@ -3,7 +3,6 @@
 *{
     font-family: 'Noto Sans KR', sans-serif;
 }
-
 /***HEADER_START***/
 header{
     width: 100%; 
@@ -42,18 +41,32 @@ header>article>h1>a{
 .nav>li>a:hover{ 
     color: #FFBB00; 
 }
-.login>li>a{
+.loginWrap{
+    display: flex;
+    align-items: center;
+}
+.loginWrap>li{
+    cursor: pointer;
     font-size: 14px;
     font-weight: bold;
     color: #777;
 }
-.login>li>a:hover{
+.loginWrap>li:hover{
     text-decoration:underline;
 }
 .ham>a{
     width: 48px;
     height: 34px;
     background-image: url(../img/ham.png);
+    display: none;
+}
+#logout{
+    display: none;
+}
+#user{
+    display: none;
+}
+#mrms{
     display: none;
 }
 /****FOOTER START***/
@@ -157,7 +170,7 @@ footer{
     .nav>li>a{
         display: none;
     }
-    .login>li>a{
+    .loginWrap>li>a{
         display: none;
     }
     .ham>a{

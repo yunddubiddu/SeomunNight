@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="./css/manager.css">
     <link rel="stylesheet" href="./css/noti_wri.css">
     <link rel="stylesheet" href="./css/noti.css">
-    <link rel="stylesheet" href="./css/layout.css">
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <header>
@@ -29,15 +30,11 @@
                 <li><a href="">입점신청</a></li>
             </ul>
             </nav>
-            <ul class="login">
-                <li id="login">로그인</li>
-                <li><span id="user"></span>님</li>
-                <li id="logout">로그아웃</li>
+            <ul class="loginWrap">
+                <li id="login" onclick="javascript:kakaoLogin()">로그인</li>
+                <div id="mrms"><span id="user"></span>님</div>
+                <li id="logout" onclick="javascript:kakaoLogout()">로그아웃</li>
             </ul>
-            <!-- <ul class="login">
-                <li><a href="login">🔒식품셀러 로그인</a></li>
-                <li><a href="login">🔒프리마켓셀러 로그인</a></li>
-            </ul> -->
             <div class="ham"><a href=""></a></div>
         </article>
     </header>
