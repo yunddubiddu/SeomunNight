@@ -60,10 +60,11 @@ main{
     width: 100%;
     background-color: #FFBB00;
     margin: auto;
+    padding: 90px 0;
+    box-sizing: border-box;
 }
 .t_main{
     width: 1200px;
-    height: 360px;
     margin: auto;
 }
 /****/
@@ -71,17 +72,16 @@ main{
     font-size: 70px;
     font-weight: bold;
     color: white;
-    padding: 90px 30px 35px;
 }
 /****/
 .t_main>div{
     display: flex;
+    margin-top: 50px;
     justify-content: space-between;
     align-items: baseline;
 }
 .nav_2{
     display: flex;
-    padding-left: 30px;
 }
 .nav_2>li{
     font-size: 24px;
@@ -158,14 +158,14 @@ main{
     padding-bottom: 20px;
 }
 .intro_txt>div>h6{
-    font-weight: 700;
-    color: #222222;
+    font-weight: 500;
+    color: #777;
 }
 .intro_img{
-    width: 100%;
-    height: 583px;
+    width: 100%; padding-bottom: 40%;
+    background-size: 100% 100%;
+    background-position: center;
     background-image: url(../img/intro_img.jpg);
-    border-radius: 20px;
     margin-top: 70px;
 }
 /***/
@@ -193,9 +193,8 @@ main{
 }
 .hour>p{
     font-size: 14px;
-    font-weight: bold;
-    color: #777;
-    padding-top: 10px;
+    color: #999;
+    padding-bottom: 30px;
     text-align: center;
 }
 .hour_img2{
@@ -221,46 +220,55 @@ main{
     justify-content: space-between;
     margin: auto;
 }
-.way_txt{
+.way_txtWrap{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    flex-direction: column;
+    width: 40%;
 }
-.way_txt>h2{
+.way_txtWrap>h2{
     font-size: 40px;
     font-weight: bold;
     color: #222;
 }
 .way_txt>p{
     font-size: 20px;
-    font-weight: bold;
-    color: #777;
+    color: #494949;
+    margin-bottom: 4px;
 }
 .way_txt>h5{
     font-size: 20px;
-    font-weight: bold;
     color: #fff;
+    font-weight: bold;
+    margin-bottom: 4px;
 }
 .way_txt>div{
     display: flex;
 }
 .way_txt_tab{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.way_txt_tab p{
-    display: block;
-    width: 210px;
+.way_txt_tab>a{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     height: 43px;
     background-color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    color: #454545;
     padding: 9px;
     box-sizing: border-box;
 }
-.way_txt_tab p:first-child{
-    margin-right: 40px;
+.way_txt_tab a:first-child{
+    margin-right: 5px;
+}
+.way_txt_tab p{
+    font-weight: bold;
+    color: #454545;
+}
+.way_txt_tab span{
+    font-weight: bold;
+    color: #454545;
 }
 .way_img{
     width: 593px;
@@ -278,7 +286,7 @@ main{
 .fes_txt{
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 .fes_txt>div>h2{
     font-size: 40px;
@@ -287,25 +295,24 @@ main{
 }
 .fes_txt>div>p{
     font-size: 14px;
-    font-weight: bold;
-    color: #777;
+    color: #999;
     padding-top: 3px;
 }
 .fes_txt>span>a{
     display: block;
     width: 70px;
     height: 70px;
-    border: 4px solid #FFBB00;
+    border: 2px solid #FFBB00;
     border-radius: 50%;
+    font-weight: 500;
     color: #FFBB00;
-    font-weight: bold;
     line-height: 70px;
     text-align: center;
 }
 .fes_txt>span>a:hover{
     color: #fff;
     background-color: #FFBB00;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 .fex_b{
     overflow: auto;
@@ -318,16 +325,14 @@ main{
 }
 .festival>div>ul>li{
     width: calc(33.333% - 20px);
-    height: 570px;
-    border: 5px solid #FFBB00;
+    border: 3px solid #FFBB00;
 }
 .festival>div>ul a{
     display: block;
     margin: 65px 40px;
 }
 .festival>div>ul h3{
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 16px;
     color: #454545;
     margin: 50px 0 0;
 }
@@ -335,17 +340,16 @@ main{
     font-size: 36px;
     font-weight: bold;
     color: #222;
-    margin: 60px 0 50px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 .festival>div>ul h6{
-    font-weight: bold;
-    color: #777777;
+    color: #999;
     margin: 50px 0;
 }
 .festival>div>ul p{
-    font-weight: bold;
-    color: #454545;
-    margin: 10px 0;
+    color: #494949;
+    margin-bottom: 4px;
 }
 /****FOOTER START***/
 footer{
@@ -502,7 +506,7 @@ footer{
     }
     .t_main>h2{
         font-size: 30px;
-        padding: 50px 0px;
+        box-sizing: border-box;
         padding-left: 20px;
     }
     .nav_2{
@@ -639,12 +643,12 @@ footer{
         display: none;
     }
     .festival>div>ul{
-        width: 250%;
+        width: 200%;
         padding: 0 20px;
         box-sizing: border-box;
     }
     .festival>div>ul>li{
-        height: auto;
+        width: calc(33.333% - 20px);
     }
     .festival>div>ul a{
         margin: 48px 30px;

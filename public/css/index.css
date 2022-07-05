@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 /***HEADER_START***/
 header{
     width: 100%; 
@@ -49,36 +55,6 @@ header>article>h1>a{
     height: 34px;
     background-image: url(../img/ham.png);
     display: none;
-}
-/****MAIN START***/
-section{
-    width: 1200px;
-    padding: 270px 0;
-    margin: auto;
-}
-section>ul{
-    display: flex;
-    justify-content: center;
-}
-section>ul>li{
-    width: 20%;
-}
-section>ul>li>a{
-    display: block;
-    width: 100%;
-    padding: 30px 0;
-    border-radius: 20px;
-    background-color: #FFBB00;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-}
-section>ul>li:nth-child(2){
-    margin: 0 20px;
-}
-section>ul>li:nth-child(3)>a{
-    background-color: #237fe9;
 }
 /****FOOTER START***/
 footer{
