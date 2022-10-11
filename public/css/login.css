@@ -1,16 +1,16 @@
 /****MAIN START***/
 .login{
-    width: 300px;
     position: relative;
+    width: 300px;
     border: 1px solid #e5e5e5;
     padding: 60px 70px;
-    margin: 100px auto;
-    margin-bottom: 120px;
+    margin: 50px auto;
+    margin-bottom: 68px;
 }
 .login>h1>a{
     display: block;
-    width: 150px;
-    height: 100px;
+    width: 120px;
+    height: 76px;
     margin: auto;
     margin-bottom: 30px;
     background-image: url(../img/main_logo.png);
@@ -61,6 +61,7 @@
 }
 .checkbox>input:checked {
     background-color: #FFBB00;
+    background-position: -91px -141px;
 }
 .checkbox>p{
     margin-left: 10px;
@@ -71,15 +72,16 @@
     cursor: pointer;
     display: block;
     height: 45px;
-    background-color: #FFBB00;
+    background-color: #fff;
     margin-top: 30px;
     margin-bottom: 10px;
     box-sizing: border-box;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 45px;
     text-align: center;
-    color: #fff;
+    color: #494949;
+    border: 1px solid #9e9c9c;
 }
 .kakaoLogin{
     cursor: pointer;
@@ -112,24 +114,73 @@
     left: 5%;
     font-size: 12px;
     color: #999;
-    
+}
+.login>h2{
+    font-size: 18px;
+    font-weight: bold;
+    color: #2B2B2B;
+}
+.login>h3{
+    font-size: 12px;
+    color: #ADABAB;
+    margin-bottom: 20px;
+}
+.loginChoice{
+    display: flex;
+    justify-content: space-between;
+}
+.loginChoice>li{
+    width: 50%;
+}
+.loginChoice>li>a{
+    display: block;
+    width: calc(100% - 10px);
+    background-color: #999;
+    opacity: .9;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.loginChoice>li>a:hover{
+    background-color: #FFBB00;
+    transition: 0.2s;
+}
+.loginChoice>li>a>figure{
+    width: 100%; padding-top: 85%;
+    margin: auto;
+    border-radius: 20%;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.loginChoice1{background-image: url(../img/login1.png);}
+.loginChoice2{background-image: url(../img/login2.png);}
+
+.loginChoice>li>a>p{
+    white-space: nowrap;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;  
 }
 @media only screen and (max-width: 540px){
+    .loginSec{
+        width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
     .login{
         width: 100%;
-        border: none;
         padding: 60px 70px;
         box-sizing: border-box;
     }
     .login>ul{
         margin-top: 30px;
     }
-    .foot_2{
-        width: 100%;
-        padding: 10px 0px;
-        box-sizing: border-box;
-    }
-    .foot_2>p{
+    .loginFoot{
+        bottom: -px;
+        left: 4%;
         font-size: 10px;
+        white-space: nowrap;
     }
 }

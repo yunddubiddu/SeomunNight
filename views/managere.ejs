@@ -1,5 +1,5 @@
-       <section class="wri">
-            <article class="wri_wrap">
+       <section class="wriSec">
+            <article class="wriArt">
                 <h2>공지사항 수정하기</h2>
                 <% if(typeof errs !== "undefined") { %>
                     <% errs.forEach((err)=>{%>
@@ -8,17 +8,17 @@
                 <% } %>
                 <form method="POST" action="/managere">
                     <input type="hidden" name="id" value="<%=row.id%>">
-                    <div class="top">
-                        <div class="topI">
+                    <div class="checkwrap">
+                        <div class="checkNaPw">
                             <p>닉네임</p>
                             <input type="text">
                         </div>
-                        <div class="topI">
+                        <div class="checkNaPw">
                             <p>비밀번호</p>
                             <input type="password">
                         </div>
                         <span class="button checkbutton">확인</span>
-                        <div class="checkbox">                 
+                        <div class="checkBox">                 
                             <input type="radio" name="textType" checked>
                             <p>공지</p>
                             <input type="radio" name="textType">

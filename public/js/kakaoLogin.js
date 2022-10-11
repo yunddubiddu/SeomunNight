@@ -12,7 +12,7 @@ function kakaoLogin(){
                     document.getElementById('login').style.display = 'none';
                     alert(response.kakao_account.profile.nickname +'님 로그인 되었습니다.')
                     document.getElementById('logout').style.display = 'block';
-                    document.getElementById('mrms').style.display = 'block';
+                    document.getElementById('mrms').style.display = 'flex';
                     document.getElementById('user').style.display = 'block';
                 }
             })

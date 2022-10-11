@@ -1,134 +1,29 @@
-/***HEADER_START***/
-header{
-    width: 100%; 
-    margin: auto;    
-}
-header>article{
-    width: 1200px;
-    background-color: white;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
-header>article>h1>a{ 
-    display: block;
-    width: 120px;
-    height: 76px;
-    background-image: url(../img/main_logo.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
-}
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.nav>li>a{
-    padding: 20px 30px;
-    box-sizing: border-box;
-    font-size: 18px;
-    font-weight: bold;
-    color: #777;
-}
-.nav>li>a:hover{ 
-    color: #FFBB00; 
-}
-.login>li>a{
-    font-size: 14px;
-    font-weight: bold;
-    color: #777;
-}
-.login>li>a:hover{
-    text-decoration:underline;
-}
-.ham>a{
-    width: 48px;
-    height: 34px;
-    background-image: url(../img/ham.png);
-    display: none;
-}
 /****MAIN START***/
-/***HEADER_START***/
-header{
-    width: 100%; 
-    margin: auto;    
-}
-header>article{
-    width: 1200px;
-    background-color: white;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
-header>article>h1>a{ 
-    display: block;
-    width: 120px;
-    height: 76px;
-    background-image: url(../img/main_logo.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
-}
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.nav>li>a{
-    padding: 20px 30px;
-    box-sizing: border-box;
-    font-size: 18px;
-    font-weight: bold;
-    color: #777;
-}
-.nav>li>a:hover{ 
-    color: #FFBB00; 
-}
-.login>li>a{
-    font-size: 14px;
-    font-weight: bold;
-    color: #777;
-}
-.login>li>a:hover{
-    text-decoration:underline;
-}
-.ham>a{
-    width: 48px;
-    height: 34px;
-    background-image: url(../img/ham.png);
-    display: none;
-}
-/****MAIN START***/
-.wri{
+.wriSec{
     width: 100%;
     margin: auto;
     background-color: #f2f2f2;
 }
-.wri_wrap{
+.wriArt{
     width: 1200px;
     margin: auto;
     padding: 3px 40px;
     padding-bottom: 70px;
     box-sizing: border-box;
 }
-h2{ 
+.wriArt>h2{ 
     font-size: 24px;
     font-weight: bold;
     color: #222624;
     margin: 10px 0;
 }
-.top{
+.checkwrap{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
 }
-.topI{
+.checkNaPw{
     width: 40%;
     padding: 6px 0;
     background-color: #fff;
@@ -139,16 +34,16 @@ h2{
     align-items: center;
     color: #222624;
 }
-.top>div:last-child{
+.checkwrap>div:last-child{
     margin-right: 0px;
 }
-.top>div>p{
+.checkwrap>div>p{
     margin: 0 10px;
     font-size: 14px;
     color: #4d4d4d;
     white-space: nowrap;
 }
-.top>div>input{
+.checkwrap>div>input{
     padding: 5px 0;
     border: none;
     outline: none;
@@ -183,11 +78,17 @@ h2{
     text-align: center;
 }
 /****/
-.checkbox{
+.checkBox{
     display: flex;
     align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
-.top>.checkbox>p{
+.checkBox>input{
+    cursor: pointer;
+    width: 20px; height: 20px;
+}
+.checkBox>p{
     font-size: 12px;
     color: #222624;
     margin: 0 2px;
@@ -257,9 +158,7 @@ textarea{
 .download>span>a{
     display: block;
     border-radius: 7px;
-    background-color: #d9d9d9;
-    font-size: 14px;
-    font-weight: bold;
+    background-color: #75b5fd;
     color: #fff;
     padding: 7px 15px;
     margin-left: 10px;
@@ -275,95 +174,7 @@ textarea{
 .button_wrap>.button:last-child>a{
     margin-left: 10px;
 }
-/****FOOTER START***/
-footer{
-    width: 100%;
-    background-color: #454545;
-}
-.foot{
-    width: 1200px;
-    margin: auto;
-    padding: 40px 0;
-}
-.foot>nav{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #777777;
-}
-.city{
-    display: flex;
-    padding-bottom: 40px;
-}
-.city>li>a{
-    color: #fff;
-    font-weight: bold;
-    margin-right: 30px;
-}
-.city>li>a:active{ 
-    text-decoration: underline;
-}
-.icon_wrap{
-    display: flex;
-    padding-right: 30px;
-}
-.icon_wrap>li>a{
-    width: 50px;
-    height: 50px;
-    display: block;
-    background-image: url(../img/sns_logo.png);
-    margin: 0 5px;
-}
-.facebook>a{
-    background-position: -76px -54px;
-}
-.utube>a{
-    background-position: -200px -217px;
-}
-.naver>a{
-    background-position: -200px -162px;
-}
-.facebook>a:hover{
-    background-image: url(../img/sns_logo_C.png);
-    background-position: -50px -15px;
-}
-.utube>a:hover{
-    background-image: url(../img/sns_logo_C.png);
-    background-position: -175px -180px;
-}
-.naver>a:hover{
-    background-image: url(../img/sns_logo_C.png);
-    background-position: -175px -125px;
-}
-.foot>div{
-    display: flex;
-    align-items: center;
-    margin: 30px 20px;
-}
-.foot>div>h1>a{
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-image: url(../img/main_logo_B.png);
-}
-.foot>div>h6{
-    color: #767676;
-    padding-left: 40px;
-}
 @media only screen and (max-width: 1200px){
-    header>article{
-        width: 100%;
-        padding: 10px 20px;
-        box-sizing: border-box;
-    }
-    .nav>li>a{
-        padding: 20px 20px;
-        box-sizing: border-box;
-        font-size: 16px;
-        font-weight: bold;
-        color: #777;
-    }
-    /**/
     .wri{
         width: 100%;
     }
@@ -394,27 +205,8 @@ footer{
         color: #222624;
         line-height: 25px;
     }
-    /**/
-    .foot{
-        width: 100%;
-    }
 }
 @media only screen and (max-width: 940px){
-    .nav_2{
-        pointer-events: none;
-    }
-    .foot_ver{
-        pointer-events: none;
-    }
-    .nav>li>a{
-        display: none;
-    }
-    .login>li>a{
-        display: none;
-    }
-    .ham>a{
-        display: block;
-    }
     /**/
     .wri{
         width: 100%;
@@ -469,22 +261,5 @@ footer{
     }
     .city>li>a:first-child{
         margin-left: 4px;
-    }
-    .foot>div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .foot>div>h1>a{
-        display: block;
-        width: 120px;
-        height: 100px;
-        background-image: url(../img/main_logo_B.png);
-    }
-    .foot>div>h6{
-        font-size: 10px;
-        color: #767676;
-        padding: 0;
     }
 }
